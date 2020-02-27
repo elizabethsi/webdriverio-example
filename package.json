@@ -8,9 +8,12 @@
   "license": "proprietary",
   "private": true,
   "dependencies": {
+    "@koa/router": "^8.0.8",
     "dotenv": "^8.2.0",
     "koa": "^2.11.0",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.1",
+    "pug": "^2.0.4"
   },
   "scripts": {
     "start": "node server.js"
