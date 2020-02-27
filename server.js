@@ -15,8 +15,20 @@ app.use(koaViews(`${__dirname}/views`, {
 }));
 
 const router = new Router();
-router.get('/', ctx => ctx.render('index'));
-router.get('/foo', ctx => ctx.render('foo'));
+router.get('/:name?', async ctx => {
+  let { name } = ctx.params;
+  if (typeof name !== 'string' || name.length < 1) {
+    name = 'index';
+  }
+
+  try {
+    await ctx.render(name);
+  } catch (e) {
+    //Unknown template or path, show 404 page
+    ctx.status = 404;
+    await ctx.render('404');
+  }
+});
 
 app.use(router.routes());
 app.use(router.allowedMethods());
