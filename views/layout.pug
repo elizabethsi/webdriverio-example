@@ -2,10 +2,19 @@ doctype html5
 html
     head
         title WebdriverIO Example
+        link(rel='stylesheet', href='/css/bulma.min.css')
         block headScripts
     body
         block body
             block header
-                h1 WebdriverIO Example
+                nav.navbar(role='navigation', aria-label='main navigation')
+                    div.navbar-menu
+                        div.navbar-start
+                            a.navbar-item(href='/') Home
+                div.hero.is-success.is-bold
+                    div.hero-body
+                        div.container
+                            h1.title
+                                Webdriver IO Example
             block content
             block footer

@@ -13,4 +13,4 @@ This will install dependencies and run the koaJS server.
 
 ### views
 
-Contains pug templates that will be served by the 
+Contains pug templates that will be served by the Koa app. Each one is served at its corresponding path (i.e. /foo will load the 'foo' template).
