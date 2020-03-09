@@ -1,19 +1,17 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Header from './Header';
-import LoremIpsum from './LoremIpsum';
+import Header from './common/Header';
+import Home from './page/Home';
+import About from './page/About'
 
 function App() {
   return (
     <div className="app">
       <Header/>
       <Switch>
-        <Route exact path="/" default render={() => (<div className="home">Home</div>)} />
-        <Route exact path="/about" render={() => (<div className="about">About</div>)} />
+        <Route exact path="/" default component={Home} />
+        <Route exact path="/about" component={About} />
       </Switch>
-      <LoremIpsum />
-      <LoremIpsum />
-      <LoremIpsum />
     </div>
   );
 }

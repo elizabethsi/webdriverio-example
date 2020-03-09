@@ -1,5 +1,5 @@
 import React from 'react';
-import Copy from './common/Copy';
+import Copy from './Copy';
 
 const LoremIpsum = () => (
   <Copy>
