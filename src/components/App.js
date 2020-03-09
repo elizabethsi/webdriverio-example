@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
-import Copy from './common/Copy';
+import LoremIpsum from './LoremIpsum';
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
         <Route exact path="/" default render={() => (<div className="home">Home</div>)} />
         <Route exact path="/about" render={() => (<div className="about">About</div>)} />
       </Switch>
-      <Copy>
-        <p>Hello There! This works!</p>
-      </Copy>
+      <LoremIpsum />
+      <LoremIpsum />
+      <LoremIpsum />
     </div>
   );
 }
