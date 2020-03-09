@@ -1,15 +1,19 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Nav from './Nav';
+import Header from './Header';
+import Copy from './common/Copy';
 
 function App() {
   return (
     <div className="app">
-      <Nav/>
+      <Header/>
       <Switch>
         <Route exact path="/" default render={() => (<div className="home">Home</div>)} />
         <Route exact path="/about" render={() => (<div className="about">About</div>)} />
       </Switch>
+      <Copy>
+        <p>Hello There! This works!</p>
+      </Copy>
     </div>
   );
 }
