@@ -4,6 +4,7 @@ import Header from './common/Header';
 import Home from './page/Home';
 import About from './page/About';
 import Contact from './page/Contact';
+import Thanks from './page/Thanks';
 import Wrapper from './common/Wrapper';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" default component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/thanks" component={Thanks} />
         </Switch>
       </Wrapper>
     </div>
