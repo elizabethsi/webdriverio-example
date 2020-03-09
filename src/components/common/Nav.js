@@ -6,7 +6,8 @@ const Nav = () => (
   <nav className="navbar main-nav is-light" role="navigation" aria-label="main navigation">
     <div className="navbar-brand">
       <Link className="navbar-item" to="/">Home</Link>
-      <Link className="navbar-item" to="/about">About Us</Link>
+      <Link className="navbar-item" to="/about">About</Link>
+      <Link className="navbar-item" to="/contact">Contact Us</Link>
     </div>
   </nav>
 );
