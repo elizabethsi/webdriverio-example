@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './common/Header';
 import Home from './page/Home';
 import About from './page/About';
-import Contact from './page/Contact';
+import Demo from './page/Demo';
 import Thanks from './page/Thanks';
 import Wrapper from './common/Wrapper';
 
@@ -15,7 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" default component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/demo" component={Demo} />
           <Route exact path="/thanks" component={Thanks} />
         </Switch>
       </Wrapper>
