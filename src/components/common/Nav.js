@@ -7,7 +7,9 @@ const Nav = () => (
     <div className="navbar-brand">
       <Link className="navbar-item" to="/">Home</Link>
       <Link className="navbar-item" to="/about">About</Link>
-      <Link className="navbar-item" to="/contact">Contact Us</Link>
+      <div className="buttons">
+        <Link className="button is-primary" to="/demo">Request a Demo</Link>
+      </div>
     </div>
   </nav>
 );
