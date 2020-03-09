@@ -1,0 +1,11 @@
+@import '~bulma/sass/utilities/all';
+@import '~bulma/sass/form/all';
+
+.error {
+  background-color: $red;
+  color: $white;
+  font-weight: $weight-bold;
+  padding: 4px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
