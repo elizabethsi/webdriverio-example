@@ -20,7 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "yarn run test:browser",
+    "test:browser": "npx wdio",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -3,6 +3,26 @@
 This repo contains an example app with a few simple pages, and a "Request a Demo" form.
 When submitted, the form is validated - if validation succeeds, the user is redirected to a "Thank You" page.
 
+## Local Development
+
+To run the app:
+
+```shell script
+yarn;
+yarn start;
+```
+
+This should run the app at localhost:3000. You can navigate to http://localhost:3000/ to view it.
+
+To run tests:
+```shell script
+yarn run test:browser;
+```
+
+This will run your webdriverIO tests. You will need to have your app running via `yarn start` before running these tests.
+
+## Tests
+
 We want to write automated browser tests for the following acceptance criteria:
 
 - Page Traversal
