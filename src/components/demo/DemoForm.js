@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './DemoForm.scss';
 import Input from './Input';
+import { connect } from 'react-redux';
+import { push } from 'connected-react-router';
+
+const mapDispatchToProps = dispatch => ({
+  redirect: () => dispatch(push('/thanks'))
+});
 
 class DemoForm extends Component {
 
@@ -9,26 +15,42 @@ class DemoForm extends Component {
 
     this.state = {
       inputs: {},
-      errors: {}
+      errors: {},
+      loading: false
     };
 
     this.onSubmit = this.onSubmit.bind(this);
     this.onValChange = this.onValChange.bind(this);
+    this.onFormSuccess = this.onFormSuccess.bind(this);
   }
 
   onSubmit(e) {
     e.preventDefault();
-    const { inputs } = this.state;
-    const errors = this.validateInputs(inputs);
 
-    if (Object.keys(errors).length > 0) {
-      this.setState({
-        errors
-      });
-      return;
-    }
+    this.setState({
+      loading: true
+    });
 
-    console.log('success!');
+    setTimeout(() => {
+      const { inputs } = this.state;
+      const errors = this.validateInputs(inputs);
+
+      if (Object.keys(errors).length > 0) {
+        this.setState({
+          errors,
+          loading: false
+        });
+        return;
+      }
+
+      this.onFormSuccess();
+    }, 500);
+  }
+
+  onFormSuccess() {
+    setTimeout(() => {
+      this.props.redirect();
+    }, 500);
   }
 
   onValChange(name, value) {
@@ -69,6 +91,8 @@ class DemoForm extends Component {
   }
 
   render() {
+    const { loading } = this.state;
+
     return (
       <form className="demo-form" onSubmit={this.onSubmit}>
         {this.renderInput('firstName', 'First Name')}
@@ -77,10 +101,10 @@ class DemoForm extends Component {
         {this.renderInput('companyName', 'Company Name')}
         {this.renderInput('companyType', 'Company Type')}
         {this.renderInput('phone', 'Phone')}
-        <button className="button is-primary is-medium is-fullwidth">Submit</button>
+        <button className={`button is-primary is-medium is-fullwidth ${loading ? 'is-loading' : ''}`}>Submit</button>
       </form>
     );
   }
 }
 
-export default DemoForm;
+export default connect(() => ({}), mapDispatchToProps)(DemoForm);
