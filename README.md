@@ -7,7 +7,7 @@ When submitted, the form is validated - if validation succeeds, the user is redi
 
 To run the app:
 
-```shell script
+```
 yarn;
 yarn start;
 ```
@@ -15,7 +15,8 @@ yarn start;
 This should run the app at localhost:3000. You can navigate to http://localhost:3000/ to view it.
 
 To run tests:
-```shell script
+
+```
 yarn run test:browser;
 ```
 
