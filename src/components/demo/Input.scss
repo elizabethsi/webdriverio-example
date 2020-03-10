@@ -2,10 +2,17 @@
 @import '~bulma/sass/form/all';
 
 .error {
-  background-color: $red;
-  color: $white;
-  font-weight: $weight-bold;
-  padding: 4px;
-  border-radius: 4px;
-  margin-bottom: 4px;
+  .label {
+    .error-msg {
+      color: $red;
+    }
+  }
+
+  .input {
+    border: 1px solid $red;
+
+    &:hover {
+      border-color: $red;
+    }
+  }
 }
