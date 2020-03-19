@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "yarn run test:browser",
+    "test": "npm run test:browser",
     "test:browser": "npx wdio",
     "eject": "react-scripts eject"
   },
